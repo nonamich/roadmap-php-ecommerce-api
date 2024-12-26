@@ -15,23 +15,32 @@
         "nunomaduro/collision": "^8.1",
         "pestphp/pest": "^3.7",
         "pestphp/pest-plugin-laravel": "^3.0",
+        "phpstan/phpstan": "^2.0",
+        "phpunit/phpunit": "^11.0.1",
         "symplify/monorepo-builder": "^11.2"
     },
     "replace": {
-        "laravel/laravel": "self.version"
+        "laravel/laravel": "self.version",
+        "nonamich/roadmap-php-ecommerce-api-gateway": "self.version"
     },
-    "minimum-stability": "a",
+    "minimum-stability": "stable",
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "App\\": "apps/gateway/app/",
-            "Database\\Factories\\": "apps/gateway/database/factories/",
-            "Database\\Seeders\\": "apps/gateway/database/seeders/"
+            "Gateway\\App\\": "apps/gateway/app/",
+            "Gateway\\Database\\Factories\\": "apps/gateway/database/factories/",
+            "Gateway\\Database\\Seeders\\": "apps/gateway/database/seeders/"
         }
     },
     "autoload-dev": {
         "psr-4": {
+            "Gateway\\Tests\\": "apps/gateway/tests/",
             "Tests\\": "apps/gateway/tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
         }
     },
     "extra": {
